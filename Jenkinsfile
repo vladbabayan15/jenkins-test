@@ -4,13 +4,13 @@ pipeline {
     parameters {
         choice(
             choices: ['dev', 'staging', 'prod'],
-            description: 'Select the target server',
+            description: 'Select the target server.',
             name: 'TARGET_SERVER'
         )
 
         string(
             defaultValue: '',
-            description: 'Additional argument for the remote command',
+            description: 'Database name to dump.',
             name: 'DB_NAME'
         )
     }
