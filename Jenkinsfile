@@ -23,7 +23,7 @@ pipeline {
                     def targetServer
                     def dbName = params.DB_NAME
                     def remoteCommand
-                    def commandArguments = "--skip_add_locks --skip-lock-tables --single-transaction --lock-for-backup --triggers --events --routines ${dbName} | gzip -9 > ${db_name}.sql.gz"
+                    def commandArguments = "--skip_add_locks --skip-lock-tables --single-transaction --lock-for-backup --triggers --events --routines ${dbName} | gzip -9 > ${dbName}.sql.gz"
 
                     if (targetEnv == 'dev') {
                         targetServer = '168.119.154.205'
